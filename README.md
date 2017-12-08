@@ -12,8 +12,10 @@
 
 Raspberry Pi 1/0 compatible Docker base image with Alpine Linux and Traefik.
 
+docker run -d -p 8080:8080 -p 80:80 -p  443:443 -v $PWD/traefik.toml:/etc/traefik/traefik.toml offtechnologies/docker-arm32v6-traefik
+
 ## Credits
-- [klud1](https://github.com/go-traefik/traefik/issues/531#issuecomment-289451101)
+- [klud1/rpi-traefik](https://github.com/klud1/rpi-traefik)
 
 ## 1.0.0 - 2017-12-08
 * first release
