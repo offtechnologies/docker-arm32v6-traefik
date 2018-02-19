@@ -1,4 +1,4 @@
-# Raspberry Pi 1 Traefik 1.5.0 Docker Image With Alpine Linux
+# Raspberry Pi 1 Traefik 1.5.2 Docker Image With Alpine Linux
 
 [![Build Status](https://travis-ci.org/offtechnologies/docker-arm32v6-traefik.svg?branch=master)](travis-ci.org/offtechnologies/docker-arm32v6-traefik)
 [![This image on DockerHub](https://img.shields.io/docker/pulls/offtechnologies/docker-arm32v6-traefik.svg)](https://hub.docker.com/r/offtechnologies/docker-arm32v6-traefik/)
@@ -8,16 +8,30 @@
 
 [offtechurl]: https://offtechnologies.gthub.io
 
-[![offtechnologies](https://raw.githubusercontent.com/offtechnologies/offtechnologies.github.io/master/logo.png)][offtechurl]
+[![offtechnologies](https://offtechnologies.github.io/images/logo150.png)][offtechurl]
 
 Raspberry Pi 1/0 compatible Docker base image with Alpine Linux and Traefik.
 
-docker run -d -p 8080:8080 -p 80:80 -p  443:443 -v $PWD/traefik.toml:/etc/traefik/traefik.toml offtechnologies/docker-arm32v6-traefik
+## Usage:
+
+```
+sudo docker run --name traefik -d \
+  -p 8080:8080 \
+  -p 80:80 \
+  -p  443:443 \
+  -v $PWD/traefik.toml:/etc/traefik/traefik.toml \
+  offtechnologies/docker-arm32v6-traefik
+```
 
 ## Credits
 - [klud1/rpi-traefik](https://github.com/klud1/rpi-traefik)
 
-## 1.0.0 - 2017-12-08
+### 1.0.1 - 2018-02-19
+* upgrade to 1.5.2
+* Tested on Raspberry Pi 1 Model B Rev 2 with Docker v18.02.0-ce
+
+
+### 1.0.0 - 2017-12-08
 * first release
 * traefik 1.5.0-rc2
 * Custom base image: Alpine Linux arm32v6 ver 3.7 with qemu-arm-static
